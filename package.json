@@ -11,6 +11,9 @@
   "author": "Agung",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.8.0",
     "nodemon": "^2.0.22"
   },
   "dependencies": {
