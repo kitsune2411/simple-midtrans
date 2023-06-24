@@ -98,7 +98,9 @@ module.exports = async (req, res) => {
     return res.status(200).send(result);
   } catch (error) {
     console.log(error);
-    return res.status(500).end();
+    const errMessage =
+      error?.ApiResponse?.error_messages ?? "Internal Server Error";
+    return res.status(500).send(errMessage);
   }
 };
 
