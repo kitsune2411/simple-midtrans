@@ -20,11 +20,10 @@ app.use((req, res) => {
   });
 });
 
-const HOST = process.env.SERVER_HOST || "localhost";
-const PORT = process.env.SERVER_PORT || 3000;
+const PORT = process.env.SERVER_PORT || 5000;
 
-app.listen(PORT, HOST, () => {
-  console.log(`server running at | ${HOST}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`server running `);
 });
 
 module.exports = app;
