@@ -11,6 +11,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  return res.status(200).json({ message: "server is online" });
+});
+
 app.use("/api", routes);
 
 app.use((req, res) => {
