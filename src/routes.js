@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const createTransaction = require("./controllers/createTransaction");
+const transactionActions = require("./controllers/transactionActions");
 const router = new Router();
 
 router.get("/hola", (req, res) => {
@@ -7,5 +8,11 @@ router.get("/hola", (req, res) => {
 });
 
 router.post("/createTransaction", createTransaction);
+router.post("/statusTransaction", transactionActions.status);
+router.post("/approveTransaction", transactionActions.approve);
+router.post("/cancelTransaction", transactionActions.cancel);
+router.post("/denyTransaction", transactionActions.deny);
+router.post("/expireTransaction", transactionActions.expire);
+router.post("/refundTransaction", transactionActions.refund);
 
 module.exports = router;
